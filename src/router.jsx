@@ -4,6 +4,8 @@ import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AppLayout from "./components/AppLayout";
 
+const basename = import.meta.env.DEV ? "/" : "/dataprincipal";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +37,6 @@ const router = createBrowserRouter([
     path: "*",
     element: <Navigate to="/login" replace />,
   },
-]);
+], {basename});
 
 export default router;

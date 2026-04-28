@@ -5,6 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: mode === "development" ? "/" : "/dataprincipal/",
+
   plugins: [
     react(),
     tailwindcss(),
