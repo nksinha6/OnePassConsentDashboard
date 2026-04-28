@@ -37,6 +37,6 @@ const router = createBrowserRouter([
     path: "*",
     element: <Navigate to="/login" replace />,
   },
-], {basename});
+], { basename });
 
 export default router;
